@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abboud Fadi D D S</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jpeg" href="logo.jpg">
 </head>
@@ -30,41 +33,63 @@
     </header>
     <main>
         <section class="about" id="about">
-            <div class="about-shape">
-                <svg width="120" height="120" viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="60" fill="#ffe0b2" fill-opacity="0.3"/></svg>
-            </div>
             <h2>Meet Dr. Fadi Abboud</h2>
             <div class="about-content">
+                <div class="about-photo">
+                    <div class="photo-container">
+                        <img src="logo.jpg" alt="Dr. Fadi Abboud" class="doctor-photo" id="doctor-photo">
+                        <div class="photo-overlay">
+                            <div class="experience-badge">
+                                <span class="years">20+</span>
+                                <span class="text">Years of Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="about-text">
-                    <p>With over 20 years of experience, Dr. Fadi Abboud is dedicated to providing exceptional dental care in Saint Lucia. Trained in Syria and Paris, Dr. Abboud brings world-class expertise and a gentle touch to every patient. His passion for dentistry and commitment to patient comfort have made him a trusted name in oral health.</p>
-                    <ul class="about-highlights">
-                        <li>Specialist in oral surgery and implants</li>
-                        <li>Known for reliability, patience, and knowledge</li>
-                        <li>Personalized care for every smile</li>
-                    </ul>
-                </div>
-                <div class="about-quote">
-                    <blockquote>“My goal is to help every patient achieve a healthy, confident smile.”<br><span>- Dr. Fadi Abboud</span></blockquote>
+                    <div class="intro-text">
+                        <h3>Your Trusted Dental Specialist</h3>
+                        <p>With over 20 years of experience, Dr. Fadi Abboud is dedicated to providing exceptional dental care in Saint Lucia. Trained in Syria and Paris, Dr. Abboud brings world-class expertise and a gentle touch to every patient. His passion for dentistry and commitment to patient comfort have made him a trusted name in oral health.</p>
+                    </div>
+                    
+                    <div class="credentials">
+                        <h4>Education & Training</h4>
+                        <div class="credential-items">
+                            <div class="credential-item">
+                                <div class="credential-icon">●</div>
+                                <div class="credential-text">
+                                    <strong>Syria</strong>
+                                    <span>Medical Training</span>
+                                </div>
+                            </div>
+                            <div class="credential-item">
+                                <div class="credential-icon">●</div>
+                                <div class="credential-text">
+                                    <strong>Paris</strong>
+                                    <span>Advanced Studies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="specialties">
+                        <h4>Specialties</h4>
+                        <ul class="about-highlights">
+                            <li><span class="highlight-icon">✓</span>Specialist in oral surgery and implants</li>
+                            <li><span class="highlight-icon">✓</span>Known for reliability, patience, and knowledge</li>
+                            <li><span class="highlight-icon">✓</span>Personalized care for every smile</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="testimonials">
-            <div class="testimonials-shape">
-                <svg width="100" height="100" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="30" fill="#e3f2fd" fill-opacity="0.3"/></svg>
-            </div>
-            <h2>What Our Patients Say</h2>
-            <div class="testimonial-list">
-                <div class="testimonial-item">
-                    <p>“Dr. Abboud is the best! He made me feel comfortable and explained everything clearly.”</p>
-                    <span>- Maria S.</span>
-                </div>
-                <div class="testimonial-item">
-                    <p>“Professional, caring, and truly skilled. My dental implants look amazing!”</p>
-                    <span>- John D.</span>
-                </div>
-                <div class="testimonial-item">
-                    <p>“I was nervous about surgery, but Dr. Abboud and his team were wonderful throughout.”</p>
-                    <span>- Lisa P.</span>
+            
+            <div class="about-quote-section">
+                <div class="quote-container">
+                    <div class="quote-icon">"</div>
+                    <blockquote class="about-quote">
+                        "My goal is to help every patient achieve a healthy, confident smile."
+                        <span class="quote-author">- Dr. Fadi Abboud</span>
+                    </blockquote>
                 </div>
             </div>
         </section>
@@ -88,9 +113,6 @@
             </div>
         </section>
         <section class="gallery" id="gallery">
-            <div class="gallery-shape">
-                <svg width="100" height="60" viewBox="0 0 100 60" fill="none"><ellipse cx="50" cy="30" rx="50" ry="30" fill="#ff7043" fill-opacity="0.08"/></svg>
-            </div>
             <h2>Before & After</h2>
             <div class="gallery-slider-wrapper">
                 <button class="gallery-arrow left" id="gallery-arrow-left" aria-label="Previous">&#8592;</button>
@@ -126,10 +148,24 @@
                 <button class="gallery-arrow right" id="gallery-arrow-right" aria-label="Next">&#8594;</button>
             </div>
         </section>
-        <section class="consultation" id="consultation">
-            <div class="consultation-shape">
-                <svg width="100" height="100" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="30" fill="#2563eb" fill-opacity="0.08"/></svg>
+        <section class="testimonials">
+            <h2>What Our Patients Say</h2>
+            <div class="testimonial-list">
+                <div class="testimonial-item">
+                    <p>“Dr. Abboud is the best! He made me feel comfortable and explained everything clearly.”</p>
+                    <span>- Maria S.</span>
+                </div>
+                <div class="testimonial-item">
+                    <p>“Professional, caring, and truly skilled. My dental implants look amazing!”</p>
+                    <span>- John D.</span>
+                </div>
+                <div class="testimonial-item">
+                    <p>“I was nervous about surgery, but Dr. Abboud and his team were wonderful throughout.”</p>
+                    <span>- Lisa P.</span>
+                </div>
             </div>
+        </section>
+        <section class="consultation" id="consultation">
             <h2>Schedule Consultation</h2>
             <form class="consultation-form">
                 <label for="name">Name:</label>
@@ -144,31 +180,34 @@
             </form>
         </section>
         <section class="contact" id="contact">
-            <div class="contact-shape">
-                <svg width="100" height="100" viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="30" fill="#ffe0b2" fill-opacity="0.08"/></svg>
-            </div>
             <h2>Contact Us</h2>
             <div class="contact-inner">
                 <div class="contact-details">
-                    <p><strong>Abboud Fadi D D S</strong></p>
-                    <p>Lamar Building Bridge St Box 5628,<br>Castries</p>
-                    <p>Phone: <a href="tel:7584502323">758-450-2323</a>, <a href="tel:7584513222">758-451-3222</a></p>
-                    <p>Email: <a href="mailto:fadi-abboud24@hotmail.fr">fadi-abboud24@hotmail.fr</a></p>
-                    <p>Website: <a href="http://www.abbouddental.com" target="_blank">www.abbouddental.com</a></p>
-                    <h3>Opening Hours</h3>
-                    <table>
-                        <tr><td>Monday - Friday</td><td>8:30am - 4:30pm</td></tr>
-                        <tr><td>Saturday</td><td>9:00am - 1:00pm</td></tr>
-                    </table>
+                    <div class="contact-info">
+                        <h3>Location</h3>
+                        <p>Lamar Building Bridge St Box 5628,<br>Castries, Saint Lucia</p>
+                        
+                        <h3>Phone</h3>
+                        <p><a href="tel:7584502323">758-450-2323</a><br>
+                        <a href="tel:7584513222">758-451-3222</a></p>
+                        
+                        <h3>Email</h3>
+                        <p><a href="mailto:fadi-abboud24@hotmail.fr">fadi-abboud24@hotmail.fr</a></p>
+                        
+                        <h3>Opening Hours</h3>
+                        <table>
+                            <tr><td>Monday - Friday</td><td>8:30am - 4:30pm</td></tr>
+                            <tr><td>Saturday</td><td>9:00am - 1:00pm</td></tr>
+                        </table>
+                    </div>
                 </div>
                 <div class="contact-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.1539926219057!2d-60.99417762577719!3d14.008881791291353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c40670783a54b33%3A0xf99ab86307816c1!2sLamar%20Building!5e0!3m2!1sen!2s!4v1752091375100!5m2!1sen!2s" width="100%" height="350" style="border:0; border-radius: 16px; box-shadow: 0 2px 16px rgba(37,99,235,0.08);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Abboud Fadi D D S. All rights reserved.</p>
+        <p>&copy; 2025 Abboud Fadi D D S. All rights reserved.</p>
     </footer>
     <script src="main.js"></script>
 </body>
