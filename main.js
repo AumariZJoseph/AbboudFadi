@@ -75,110 +75,110 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', updateSlider);
     updateSlider();
 
-    // Consultation form submit handler
-    const form = document.querySelector('.consultation-form');
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will contact you soon.');
-            form.reset();
-        });
-    }
-});
-
-// Contact section animation on scroll
-window.addEventListener('DOMContentLoaded', function() {
-    var contactSection = document.querySelector('.contact');
-    if (!contactSection) return;
-    function onScroll() {
-        var rect = contactSection.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-            contactSection.classList.add('contact-in-view');
-            window.removeEventListener('scroll', onScroll);
-        }
-    }
-    window.addEventListener('scroll', onScroll);
-    onScroll();
-});
-
-// About section animations and interactions
-document.addEventListener('DOMContentLoaded', function() {
-    const doctorPhoto = document.getElementById('doctor-photo');
-    const credentialItems = document.querySelectorAll('.credential-item');
-    const highlightItems = document.querySelectorAll('.about-highlights li');
-    const quoteContainer = document.querySelector('.quote-container');
-    
-    // Photo hover effect
-    if (doctorPhoto) {
-        doctorPhoto.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
-        });
-        
-        doctorPhoto.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    }
-    
-    // Animate credential items on scroll
-    const observerOptions = {
-        threshold: 0.3,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 200);
+    // Contact section animation on scroll
+    window.addEventListener('DOMContentLoaded', function() {
+        var contactSection = document.querySelector('.contact');
+        if (!contactSection) return;
+        function onScroll() {
+            var rect = contactSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                contactSection.classList.add('contact-in-view');
+                window.removeEventListener('scroll', onScroll);
             }
-        });
-    }, observerOptions);
-    
-    // Observe credential and highlight items
-    credentialItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(item);
+        }
+        window.addEventListener('scroll', onScroll);
+        onScroll();
     });
-    
-    highlightItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(item);
-    });
-    
-    // Quote container animation
-    if (quoteContainer) {
-        quoteContainer.style.opacity = '0';
-        quoteContainer.style.transform = 'translateY(30px)';
-        quoteContainer.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+
+    // About section animations and interactions
+    document.addEventListener('DOMContentLoaded', function() {
+        const doctorPhoto = document.getElementById('doctor-photo');
+        const credentialItems = document.querySelectorAll('.credential-item');
+        const highlightItems = document.querySelectorAll('.about-highlights li');
+        const quoteContainer = document.querySelector('.quote-container');
         
-        const quoteObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
+        // Photo hover effect
+        if (doctorPhoto) {
+            doctorPhoto.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            doctorPhoto.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        }
+        
+        // Animate credential items on scroll
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
-                    }, 500);
+                    }, index * 200);
                 }
             });
-        }, { threshold: 0.5 });
+        }, observerOptions);
         
-        quoteObserver.observe(quoteContainer);
-    }
-    
-    // Experience badge pulse animation
-    const experienceBadge = document.querySelector('.experience-badge');
-    if (experienceBadge) {
-        setInterval(() => {
-            experienceBadge.style.transform = 'scale(1.05)';
-            setTimeout(() => {
-                experienceBadge.style.transform = 'scale(1)';
-            }, 200);
-        }, 3000);
-    }
-}); 
+        // Observe credential and highlight items
+        credentialItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+        
+        highlightItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+        
+        // Quote container animation
+        if (quoteContainer) {
+            quoteContainer.style.opacity = '0';
+            quoteContainer.style.transform = 'translateY(30px)';
+            quoteContainer.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            
+            const quoteObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, 500);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            quoteObserver.observe(quoteContainer);
+        }
+        
+        // Experience badge pulse animation
+        const experienceBadge = document.querySelector('.experience-badge');
+        if (experienceBadge) {
+            setInterval(() => {
+                experienceBadge.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    experienceBadge.style.transform = 'scale(1)';
+                }, 200);
+            }, 3000);
+        }
+    }); 
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+    }); 
